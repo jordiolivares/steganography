@@ -65,7 +65,7 @@ def decode (image, x, y, z):
     return im
 
 def main():
-	pool = multiprocessing.Pool() # For the parallel map()
+    pool = multiprocessing.Pool() # For the parallel map()
     if sys.argv[1] == "decode":
         source = Image.open(sys.argv[-2])
         print ("Decoding the encoded...")
