@@ -45,7 +45,7 @@ def hidden(hidden):
     im = toadd.size
     toadd = list (toadd.getdata())
     toadd = [ chopBits (toadd[n], 3, 2, 3)
-        for n in range (im[1] * im[0]) ]
+        for n in xrange (im[1] * im[0]) ]
     return toadd
 
 def carrier(origin):
@@ -55,7 +55,7 @@ def carrier(origin):
     original = [ (  cleanBits (original[n][0], 3), 
                     cleanBits (original[n][1], 2), 
                     cleanBits (original[n][2], 3) ) 
-                for n in range (im[1] * im[0]) ]
+                for n in xrange (im[1] * im[0]) ]
     return original
 
 def decode (image, x, y, z):
